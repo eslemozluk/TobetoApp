@@ -34,25 +34,28 @@ class _LoginscreenState extends State<Loginscreen> {
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             color: Theme.of(context).colorScheme.background,
             child: SizedBox(
-              width: 350,
-              height: 360,
+              width: 310,
+              height: 340,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  const SizedBox(
+                    height: 15,
+                  ),
                   Transform.scale(
-                    scale: 0.4,
+                    scale: 0.5,
                     child: Image.asset("assets/image/tobeto-logo.png"),
                   ),
                   const SizedBox(
-                    height: 20,
+                    height: 15,
                   ),
                   Column(
                     children: [
                       SizedBox(
                         height: 40,
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 30, right: 30),
+                          padding: const EdgeInsets.only(left: 40, right: 40),
                           child: TextField(
                             controller: _nameController,
                             decoration: InputDecoration(
@@ -78,7 +81,7 @@ class _LoginscreenState extends State<Loginscreen> {
                       SizedBox(
                         height: 40,
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 30, right: 30),
+                          padding: const EdgeInsets.only(left: 40, right: 40),
                           child: TextField(
                             controller: _parolaController,
                             obscureText: _isObscured,
@@ -104,7 +107,7 @@ class _LoginscreenState extends State<Loginscreen> {
                           ),
                         ),
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: 23),
                       ElevatedButton(
                         onPressed: () {
                           if (_nameController.text.isNotEmpty ||
@@ -116,7 +119,7 @@ class _LoginscreenState extends State<Loginscreen> {
                               context: context,
                               builder: (context) {
                                 return AlertDialog(
-                                  title: const Text("Bu Alan Boş Bırakılmaz."),
+                                  title: const Text("Bu Alan Boş Bırakılamaz."),
                                   actions: [
                                     TextButton(
                                         onPressed: () {
@@ -130,19 +133,25 @@ class _LoginscreenState extends State<Loginscreen> {
                           }
                         },
                         style: ElevatedButton.styleFrom(
+                            minimumSize: const Size(120, 40),
                             backgroundColor: primaryLightColor),
-                        child: const Text(
-                          "Giriş Yap",
-                          style: TextStyle(color: Colors.white),
-                        ),
+                        child: Text("Giriş Yap",
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyLarge
+                                ?.copyWith(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 15,
+                                    color: textDarkColor)),
                       ),
-                      const SizedBox(height: 20),
-                      const Divider(),
+                      const SizedBox(height: 15),
+                      Container(
+                          width: 250, height: 1, color: primaryLightColor),
                       TextButton(
                           onPressed: () {},
                           child: const Text(
-                            "parolamı unuttum",
-                            style: TextStyle(color: textLightColor),
+                            "Parolamı Unuttum",
+                            style: TextStyle(color: primaryLightColor),
                           ))
                     ],
                   )
