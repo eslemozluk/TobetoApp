@@ -3,7 +3,7 @@ import 'package:loginscreen/screens/loginscreen.dart';
 
 const Color primaryLightColor = Color(0xFF9833FF);
 const Color secondaryLightColor = Color(0xFF00D29B);
-const Color backgroundLightColor = Color(0xFFFFFFFF);
+const Color backgroundLightColor = Color.fromARGB(255, 255, 255, 255);
 const Color textLightColor = Color(0xFF515151);
 const Color bodyLightColor = Color(0xFF000000);
 
