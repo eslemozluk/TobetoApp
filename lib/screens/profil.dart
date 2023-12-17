@@ -14,7 +14,7 @@ class _ProfilState extends State<Profil> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("profil",
+        title: const Text("Profil",
             style:
                 TextStyle(color: textDarkColor, fontWeight: FontWeight.w300)),
         backgroundColor: primaryLightColor,
@@ -22,7 +22,7 @@ class _ProfilState extends State<Profil> {
       drawer: CompDrawer(),
       body: Center(
         child: Text(
-          "profil",
+          "Profil",
           style: TextStyle(color: backgroundDarkColor),
         ),
       ),
