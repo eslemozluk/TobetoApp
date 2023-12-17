@@ -9,7 +9,7 @@ const Color bodyLightColor = Color(0xFF000000);
 
 const Color primaryDarkColor = Color(0xFF280064);
 const Color secondaryDarkColor = Color(0xFF006446);
-const Color backgroundDarkColor = Color(0xFF000000);
+const Color backgroundDarkColor = Color.fromARGB(255, 59, 3, 90);
 const Color textDarkColor = Colors.white;
 const Color bodyDarkColor = Colors.white;
 
