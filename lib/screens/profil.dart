@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:loginscreen/componenst/compDrawer.dart';
 import 'package:loginscreen/main.dart';
 
-class Homepage extends StatefulWidget {
-  const Homepage({Key? key}) : super(key: key);
+class Profil extends StatefulWidget {
+  const Profil({Key? key}) : super(key: key);
 
   @override
-  _HomepageState createState() => _HomepageState();
+  _ProfilState createState() => _ProfilState();
 }
 
-class _HomepageState extends State<Homepage> {
+class _ProfilState extends State<Profil> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Homepage",
+        title: const Text("profil",
             style:
                 TextStyle(color: textDarkColor, fontWeight: FontWeight.w300)),
         backgroundColor: primaryLightColor,
@@ -22,7 +22,7 @@ class _HomepageState extends State<Homepage> {
       drawer: CompDrawer(),
       body: Center(
         child: Text(
-          "Anasayfa",
+          "profil",
           style: TextStyle(color: backgroundDarkColor),
         ),
       ),
