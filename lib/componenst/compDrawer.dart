@@ -14,17 +14,25 @@ class CompDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: backgroundLightColor,
       child: ListView(
-        padding: EdgeInsets.zero,
-        children: [
-          DrawerHeader(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(right: 100, top: 60, left: 10),
             child: Image.asset("assets/image/tobeto-logo.png", scale: 2),
           ),
           const SizedBox(
+<<<<<<< HEAD
             height: 0,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 20, right: 20),
+=======
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 20),
+>>>>>>> 288a9f8 (drawer)
             child: ListTile(
               title: Text(
                 'Anasayfa',
@@ -38,7 +46,11 @@ class CompDrawer extends StatelessWidget {
             ),
           ),
           Padding(
+<<<<<<< HEAD
             padding: const EdgeInsets.only(left: 20, right: 20),
+=======
+            padding: const EdgeInsets.only(left: 20),
+>>>>>>> 288a9f8 (drawer)
             child: ListTile(
               title: Text(
                 'Değerlendirmeler',
@@ -52,7 +64,11 @@ class CompDrawer extends StatelessWidget {
             ),
           ),
           Padding(
+<<<<<<< HEAD
             padding: const EdgeInsets.only(left: 20, right: 20),
+=======
+            padding: const EdgeInsets.only(left: 20),
+>>>>>>> 288a9f8 (drawer)
             child: ListTile(
               title: Text(
                 'Profil',
@@ -66,7 +82,11 @@ class CompDrawer extends StatelessWidget {
             ),
           ),
           Padding(
+<<<<<<< HEAD
             padding: const EdgeInsets.only(left: 20, right: 20),
+=======
+            padding: const EdgeInsets.only(left: 20),
+>>>>>>> 288a9f8 (drawer)
             child: ListTile(
               title: Text(
                 'Katalog',
@@ -80,7 +100,11 @@ class CompDrawer extends StatelessWidget {
             ),
           ),
           Padding(
+<<<<<<< HEAD
             padding: const EdgeInsets.only(left: 20, right: 20),
+=======
+            padding: const EdgeInsets.only(left: 20),
+>>>>>>> 288a9f8 (drawer)
             child: ListTile(
               title: Text(
                 'Takvim',
@@ -96,6 +120,7 @@ class CompDrawer extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
+<<<<<<< HEAD
           const SizedBox(
             height: 10,
           ),
@@ -103,12 +128,22 @@ class CompDrawer extends StatelessWidget {
             width: 50,
             height: 1,
             color: primaryLightColor,
+=======
+          Container(
+            width: 30,
+            height: 1,
+            color: const Color.fromARGB(255, 221, 221, 217),
+>>>>>>> 288a9f8 (drawer)
           ),
           const SizedBox(
             height: 10,
           ),
           Padding(
+<<<<<<< HEAD
             padding: const EdgeInsets.only(left: 20, right: 20),
+=======
+            padding: const EdgeInsets.only(left: 20),
+>>>>>>> 288a9f8 (drawer)
             child: ListTile(
               leading: const Icon(Icons.home),
               title: Text(
@@ -123,6 +158,7 @@ class CompDrawer extends StatelessWidget {
             ),
           ),
           const SizedBox(
+<<<<<<< HEAD
             height: 20,
           ),
           Padding(
@@ -144,6 +180,41 @@ class CompDrawer extends StatelessWidget {
           ListTile(
             title: Text('© 2022 Tobeto', style: TextStyle(fontSize: 15)),
           ),
+=======
+            height: 10,
+          ),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => const Kullanici()));
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Kullanıcı Girişi",
+                    style: const TextStyle(color: textLightColor)
+                        .copyWith(fontSize: 18, fontWeight: FontWeight.w500),
+                  ),
+                  const SizedBox(
+                    width: 85,
+                  ),
+                  const Icon(
+                    Icons.person,
+                    color: Colors.black,
+                    size: 30,
+                  ),
+                ],
+              )),
+          const SizedBox(height: 15),
+          const Padding(
+            padding: EdgeInsets.only(left: 20),
+            child: ListTile(
+              title: Text('© 2022 Tobeto',
+                  style: TextStyle(color: textLightColor)),
+            ),
+          ),
+>>>>>>> 288a9f8 (drawer)
         ],
       ),
     );
