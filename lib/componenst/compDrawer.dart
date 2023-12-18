@@ -22,17 +22,10 @@ class CompDrawer extends StatelessWidget {
             child: Image.asset("assets/image/tobeto-logo.png", scale: 2),
           ),
           const SizedBox(
-<<<<<<< HEAD
-            height: 0,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20, right: 20),
-=======
             height: 20,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 20),
->>>>>>> 288a9f8 (drawer)
             child: ListTile(
               title: Text(
                 'Anasayfa',
@@ -46,11 +39,7 @@ class CompDrawer extends StatelessWidget {
             ),
           ),
           Padding(
-<<<<<<< HEAD
-            padding: const EdgeInsets.only(left: 20, right: 20),
-=======
             padding: const EdgeInsets.only(left: 20),
->>>>>>> 288a9f8 (drawer)
             child: ListTile(
               title: Text(
                 'Değerlendirmeler',
@@ -64,11 +53,7 @@ class CompDrawer extends StatelessWidget {
             ),
           ),
           Padding(
-<<<<<<< HEAD
-            padding: const EdgeInsets.only(left: 20, right: 20),
-=======
             padding: const EdgeInsets.only(left: 20),
->>>>>>> 288a9f8 (drawer)
             child: ListTile(
               title: Text(
                 'Profil',
@@ -82,11 +67,7 @@ class CompDrawer extends StatelessWidget {
             ),
           ),
           Padding(
-<<<<<<< HEAD
-            padding: const EdgeInsets.only(left: 20, right: 20),
-=======
             padding: const EdgeInsets.only(left: 20),
->>>>>>> 288a9f8 (drawer)
             child: ListTile(
               title: Text(
                 'Katalog',
@@ -100,11 +81,7 @@ class CompDrawer extends StatelessWidget {
             ),
           ),
           Padding(
-<<<<<<< HEAD
-            padding: const EdgeInsets.only(left: 20, right: 20),
-=======
             padding: const EdgeInsets.only(left: 20),
->>>>>>> 288a9f8 (drawer)
             child: ListTile(
               title: Text(
                 'Takvim',
@@ -120,30 +97,16 @@ class CompDrawer extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-<<<<<<< HEAD
-          const SizedBox(
-            height: 10,
-          ),
-          Container(
-            width: 50,
-            height: 1,
-            color: primaryLightColor,
-=======
           Container(
             width: 30,
             height: 1,
             color: const Color.fromARGB(255, 221, 221, 217),
->>>>>>> 288a9f8 (drawer)
           ),
           const SizedBox(
             height: 10,
           ),
           Padding(
-<<<<<<< HEAD
-            padding: const EdgeInsets.only(left: 20, right: 20),
-=======
             padding: const EdgeInsets.only(left: 20),
->>>>>>> 288a9f8 (drawer)
             child: ListTile(
               leading: const Icon(Icons.home),
               title: Text(
@@ -158,29 +121,6 @@ class CompDrawer extends StatelessWidget {
             ),
           ),
           const SizedBox(
-<<<<<<< HEAD
-            height: 20,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20, right: 20),
-            child: ListTile(
-              leading: const Icon(Icons.person_2),
-              title: Text(
-                'ALİ KOÇ',
-                style: const TextStyle(color: textLightColor)
-                    .copyWith(fontSize: 18, fontWeight: FontWeight.w500),
-              ),
-              onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => (const Kullanici())));
-              },
-            ),
-          ),
-          const SizedBox(height: 15),
-          ListTile(
-            title: Text('© 2022 Tobeto', style: TextStyle(fontSize: 15)),
-          ),
-=======
             height: 10,
           ),
           ElevatedButton(
@@ -214,7 +154,6 @@ class CompDrawer extends StatelessWidget {
                   style: TextStyle(color: textLightColor)),
             ),
           ),
->>>>>>> 288a9f8 (drawer)
         ],
       ),
     );
