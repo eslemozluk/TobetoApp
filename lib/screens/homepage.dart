@@ -18,6 +18,7 @@ class _HomepageState extends State<Homepage> {
             style:
                 TextStyle(color: textDarkColor, fontWeight: FontWeight.w300)),
         backgroundColor: primaryLightColor,
+        centerTitle: true,
       ),
       drawer: CompDrawer(),
       body: Center(
