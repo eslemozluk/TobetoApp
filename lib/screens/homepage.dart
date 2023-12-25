@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:loginscreen/componenst/compDrawer.dart';
 import 'package:loginscreen/main.dart';
+import 'package:loginscreen/widgets/gradient_card.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -74,7 +75,7 @@ class _HomepageState extends State<Homepage> {
                   ),
 
                   //birinci kısım
-                  const SizedBox(height: 40),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.05),
                   SizedBox(
                     child: Text(
                       "Yeni nesil öğrenme deneyimi ile Tobeto kariyer yolculuğunda senin yanında!",
@@ -86,7 +87,7 @@ class _HomepageState extends State<Homepage> {
                           fontSize: 19),
                     ),
                   ),
-                  const SizedBox(height: 30),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.05),
                   Card(
                     elevation: 5,
                     color: Colors.white,
@@ -109,22 +110,21 @@ class _HomepageState extends State<Homepage> {
                                   width: 280,
                                 ),
                               ),
-                              SizedBox(height: 30),
                               SizedBox(
-                                child: Text(
-                                    "Ücretsiz eğitimlerle,geleceğin mesleklerinde sen de yerini al. ",
-                                    softWrap: true,
-                                    textAlign: TextAlign.center,
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .bodyLarge
-                                        ?.copyWith(
-                                          color: bodyLightColor,
-                                          fontWeight: FontWeight.normal,
-                                          fontSize: 28,
-                                        )),
+                                height:
+                                    MediaQuery.of(context).size.height * 0.02,
                               ),
-                              SizedBox(height: 50),
+                              const SizedBox(
+                                child: Text(
+                                  "Ücretsiz eğitimlerle,geleceğin mesleklerinde sen de yerini al. ",
+                                  softWrap: true,
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(fontSize: 25),
+                                ),
+                              ),
+                              SizedBox(
+                                  height: MediaQuery.of(context).size.height *
+                                      0.04),
                               Text("Aradığın  “İş” Burada!",
                                   softWrap: true,
                                   textAlign: TextAlign.center,
@@ -132,7 +132,7 @@ class _HomepageState extends State<Homepage> {
                                       .textTheme
                                       .bodyLarge
                                       ?.copyWith(
-                                        color: bodyLightColor,
+                                        color: textLightColor,
                                         fontWeight: FontWeight.bold,
                                         fontSize: 50,
                                       )),
@@ -213,7 +213,6 @@ class _HomepageState extends State<Homepage> {
                                                   color: textLightColor,
                                                 )),
                                         SizedBox(width: 20),
-                                        Icon(Icons.check_circle),
                                       ],
                                     ),
                                   ),
@@ -226,51 +225,28 @@ class _HomepageState extends State<Homepage> {
                     ),
                   ),
 
-                  const SizedBox(height: 20),
-                  Column(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(16),
-                        width: 350,
-                        height: 250,
-                        decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(50),
-                            bottomLeft: Radius.circular(50),
-                            bottomRight: Radius.circular(50),
-                          ),
-                          gradient: LinearGradient(
-                            colors: [
-                              Color(0xFF200E8E),
-                              Color(0xFF574385),
-                              Color(0xFF9B85E6),
-                            ],
-                            begin: Alignment.topRight,
-                            end: Alignment.bottomLeft,
-                          ),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Center(
-                              child: Text("Profilini oluştur",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.bold)),
-                            ),
-                            SizedBox(height: 50),
-                            ElevatedButton(
-                                onPressed: () {}, child: Text("Başla")),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 20),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+                  GradientCard(
+                      colorcard1: Colors.purple.shade200,
+                      colorcard2: Colors.purple.shade400,
+                      colorcard3: Colors.purple.shade800,
+                      baslik: "Profil Oluştur"),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+                  GradientCard(
+                      colorcard1: Colors.indigo.shade800,
+                      colorcard2: Colors.indigo.shade500,
+                      colorcard3: Colors.indigo.shade300,
+                      baslik: "Kendini değerlendir"),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+                  GradientCard(
+                      colorcard1: Colors.pinkAccent.shade400,
+                      colorcard2: Colors.pinkAccent.shade200,
+                      colorcard3: Colors.pinkAccent.shade100,
+                      baslik: "Öğrenmeye başla"),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.03),
                   Card(
                     child: Container(
+                      width: 500,
                       height: 150,
                       color: primaryLightColor,
                     ),
