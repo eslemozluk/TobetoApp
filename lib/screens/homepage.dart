@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:loginscreen/componenst/compDrawer.dart';
 import 'package:loginscreen/main.dart';
 import 'package:loginscreen/widgets/gradient_card.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -35,13 +36,13 @@ class _HomepageState extends State<Homepage> {
         backgroundColor: backgroundLightColor,
         centerTitle: true,
       ),
-      endDrawer: CompDrawer(),
+      endDrawer: const CompDrawer(),
       body: ListView(
         children: [
           Container(
-            color: Color.fromARGB(31, 190, 185, 185),
+            color: const Color.fromARGB(31, 190, 185, 185),
             child: Padding(
-              padding: EdgeInsets.only(top: 80),
+              padding: const EdgeInsets.only(top: 80),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -136,7 +137,7 @@ class _HomepageState extends State<Homepage> {
                                         fontWeight: FontWeight.bold,
                                         fontSize: 50,
                                       )),
-                              SizedBox(height: 20),
+                              const SizedBox(height: 20),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
@@ -194,8 +195,8 @@ class _HomepageState extends State<Homepage> {
                               const SizedBox(height: 20),
                               Card(
                                 elevation: 5,
-                                color: Color.fromARGB(255, 230, 230, 230),
-                                child: Container(
+                                color: const Color.fromARGB(255, 230, 230, 230),
+                                child: SizedBox(
                                   width: 350,
                                   height: 200,
                                   child: Padding(
@@ -212,7 +213,7 @@ class _HomepageState extends State<Homepage> {
                                                   fontWeight: FontWeight.bold,
                                                   color: textLightColor,
                                                 )),
-                                        SizedBox(width: 20),
+                                        const SizedBox(width: 20),
                                       ],
                                     ),
                                   ),
@@ -225,23 +226,21 @@ class _HomepageState extends State<Homepage> {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  Container(
-                    child: const Padding(
-                      padding: EdgeInsets.only(right: 290, top: 75), //
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Sınavlarım",
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                            ),
-                            textAlign: TextAlign.start,
+                  const Padding(
+                    padding: EdgeInsets.only(right: 290, top: 75), //
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Sınavlarım",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
                           ),
-                          // sınavlarım kısmı
-                        ],
-                      ),
+                          textAlign: TextAlign.start,
+                        ),
+                        // sınavlarım kısmı
+                      ],
                     ),
                   ),
 
@@ -261,7 +260,7 @@ class _HomepageState extends State<Homepage> {
                         width: 150,
                         height: 190,
                         color: Colors.white,
-                        padding: EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(8.0),
                         child: Align(
                           alignment: Alignment
                               .topRight, // İstediğiniz hizalama değerini kullanabilirsiniz
@@ -360,7 +359,7 @@ class _HomepageState extends State<Homepage> {
                       child: Stack(
                         children: [
                           Align(
-                            alignment: Alignment(-0.8, -0.8),
+                            alignment: const Alignment(-0.8, -0.8),
                             child: Image.asset(
                               "assets/image/tobeto-logo_beyaz_2.png",
                               width: 100,
@@ -369,12 +368,12 @@ class _HomepageState extends State<Homepage> {
                             ),
                           ),
                           Align(
-                            alignment: Alignment(0.7, -0.4),
+                            alignment: const Alignment(0.7, -0.4),
                             child: ElevatedButton(
                               onPressed: () {
                                 // Butona tıklandığında yapılacak işlemler
                               },
-                              child: Text(
+                              child: const Text(
                                 "Bize Ulaşın",
                                 style: TextStyle(
                                     color: Colors.black,
@@ -402,17 +401,27 @@ class _HomepageState extends State<Homepage> {
           ),
         ],
       ),
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Align(
-          alignment: Alignment.bottomRight,
-          child: FloatingActionButton(
-            onPressed: () {
-              // canıma okuyon var ya
-            },
-            child: Icon(Icons.message),
+      floatingActionButton: SpeedDial(
+        icon: Icons.message,
+        activeIcon: Icons.message_outlined,
+        elevation: 3.0,
+        backgroundColor: Color.fromRGBO(153, 51, 255, 1),
+        overlayColor: Colors.black,
+        overlayOpacity: 0.5,
+        spacing: 10.0,
+        curve: Curves.easeInOutCubic,
+        children: [
+          SpeedDialChild(
+            child: Icon(Icons.mail),
+            backgroundColor: const Color.fromRGBO(153, 51, 255, 1),
+            onTap: () => print('Mail tıklandı'),
           ),
-        ),
+          SpeedDialChild(
+            child: Icon(Icons.phone),
+            backgroundColor: Colors.green,
+            onTap: () => print('Telefon tıklandı'), //
+          ),
+        ],
       ),
     );
   }

@@ -28,6 +28,10 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  flutter_speed_dial: ^4.0.2 
+  shake: ^2.2.0
+  flutter_bloc: ^7.0.0
+  bloc: ^7.0.0
   flutter:
     sdk: flutter
 

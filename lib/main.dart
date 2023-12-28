@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:loginscreen/screens/loginscreen.dart';
 
-
 const Color primaryLightColor = Color(0xFF9833FF);
 const Color secondaryLightColor = Color(0xFF00D29B);
 const Color backgroundLightColor = Color.fromARGB(255, 255, 255, 255);
@@ -48,7 +47,6 @@ final darkTheme = ThemeData(
   ),
 );
 
-
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
@@ -57,5 +55,3 @@ void main() {
     home: const Loginscreen(),
   ));
 }
-
-
